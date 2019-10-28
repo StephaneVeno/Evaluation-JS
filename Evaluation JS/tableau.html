@@ -1,0 +1,130 @@
+	<!DOCTYPE html>
+<html lang="fr">
+<head>  
+    <meta charset="UTF-8">
+    <title>Phase 7</title>
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="assets/css/mobile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="col">
+        <a href="index.html"><img id="logo" src="assets/img/jarditou_logo.jpg" alt="Logo de l'entreprise Jarditou représentant un jardinié poussant une brouette rempli" title="Logo de l'entreprise Jarditou représentant un jardinié poussant une brouette rempli"></a>
+        <p class="d-none d-md-block" id="ttlejardin">Tout le jardin</p>
+      </div>
+  <nav id="navbar" class="navbar navbar-expand-lg bg-success navbar-dark col">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" >Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tableau.html">Tableau</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="formulaire.html">Formulaire</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="Exercices.html">Exercices d'évaluation</a>
+              </li> 
+          </ul>
+          </div>
+          </nav>
+        <a href="index.html"><img src="assets/img/promotion.jpg" id="promo" class="img-fluid col" alt="Bord de piscine pleine d'eau bleu clair avec du beau parquet clair surplombé des mots Promotion sur lames de terrasse" title="Bord de piscine pleine d'eau bleu clair avec du beau parquet clair surplombé des mots Promotion sur lames de terrasse"></a>
+        </header>
+    <!-- Tr c'est pour créer une ligne, et les td sont pour compartimenter (table sert plus a mettre en forme un systeme ''tableur'' et Th pour les haut de tableau-->
+    <div class="row">
+    <div class="col">
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered">
+          <thead>
+            <tr>
+            <th class="colN">Photo</th>
+            <th class="colN">ID</th>
+              <th class="colN">Catégorie</th>
+              <th class="colN">Libellé</th>
+              <th class="colN">Prix</th>
+              <th class="colN">Couleur</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col1"><img src="assets/img/jarditou_photos/7.jpg" class="visuel" alt="Barbevue gris foncée et porte de dessous de plaque de cuisson gris clair" title="Barbevue gris foncée et porte de dessous de plaque de cuisson gris clair"></td>
+              <td class="col2">7</td>
+              <td class="col3">Barbecues</td>
+              <td class="col4">Aramis</td>
+              <td class="col5">110.00€</td>
+              <td class="col6">Brun</td>
+            </tr>
+            <tr>
+              <td class="col1"><img src="assets/img/jarditou_photos/8.jpg" class="visuel" alt="Barbecue noir et aluminium" title="Barbecue noir et aluminium"></td>
+              <td class="col2">8</td>
+              <td class="col3">Barbecues</td>
+              <td class="col4">Athos</td>
+              <td class="col5">249.99€</td>
+              <td class="col6">Noir</td>
+             </tr>
+             <tr>
+              <td class="col1"><img src="assets/img/jarditou_photos/11.jpg" class="visuel" alt="Barbecue en aluminium" title="Barbecue en aluminium"></td>
+              <td class="col2">11</td>
+              <td class="col3">Barbecues</td>
+              <td class="col4">Clatronic</td>
+              <td class="col5">135.90€</td>
+              <td class="col6">Chrome</td>
+             </tr>    
+             <tr>
+              <td class="col1"><img src="assets/img/jarditou_photos/12.jpg" class="visuel" alt="Barbecue noir avec support en métal simmple et repos-plat sur les deux cotés en bois clair" title="Barbecue noir avec support en métal simmple et repos-plat sur les deux cotés en bois clair"></td>
+              <td class="col2">12</td>
+              <td class="col3">Barbecues</td>
+              <td class="col4">Camping</td>
+              <td class="col5">88.00€</td>
+              <td class="col6">Noir</td>
+             </tr>
+             <tr>
+               <td class="col1"><img id="Brouettes"src="assets/img/jarditou_photos/13.jpg" alt="Brouette verte kaki" title="Brouette verte kaki"></td>
+               <td class="col2">13</td>
+               <td class="col3">Brouettes</td>
+               <td class="col4">Green</td>
+               <td class="col5">49.00€</td>
+               <td class="col6">Verte</td>
+            </tr>
+            </tbody>
+             <!--
+               - Colonne 1 (class="col1") Colonne  images
+               - Colonne col2 (class="col2") Colonne ID des objets
+               - Colonne col3 (class="col3") Colonne catégorie
+               - Colonne col4 (class="col4") Colonne Libellé
+               - Colonne col5 (class="col5") Colonne Prix
+               - Colonne col6 (class="col6") Colonne Couleur-->
+
+               <!-- - Border collapse sert à avoir un très unique
+              - Border raduis sert a arrondir les bord (comme autour des images)
+            - -->
+          </table>
+        </div>
+      </div>
+    </div>
+          <footer class="col">
+            <ul>
+              <li>
+                <a href="index.html">Mentions légales</a>
+              </li>
+              <li>
+                <a href="index.html">Horaires</a>
+              </li>
+              <li><a href="index.html">Plan du site</a></li>
+            </ul>
+          </footer>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+            </div>
+            </div>
+    </body>
+    </html>

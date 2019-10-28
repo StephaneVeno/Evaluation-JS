@@ -1,0 +1,19 @@
+@media screen and (max-width: 768px)
+{
+    aside {
+        display: none;
+    }
+    li{
+        display: block;
+    }
+    body{
+        font-size: 25px;
+    }
+}
+/*
+- max-width: 100% : cette propriété est utilisée pour définir la largeur maximale d'un élément donné.
+Elle empêche la valeur de la propriété width de devenir supérieure à la valeur spécifiée par max-width (autrement dit, max-width est une borne supérieur pour width).
+Ainsi, l'image s'adaptera à la largeur de son conteneur sans jamais la dépasser même si la largeur de l'image en pixels est supérieure à la largeur de la balise qui contient l'image.
+
+- height: auto : calcule automatiquement la hauteur; en responsive, permet d'ajuster la hauteur en rapport à la largeur de l'image, sinon l'image présenterait une distorsion.
+*/
