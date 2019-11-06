@@ -21,6 +21,10 @@ table, tr, td, th {
     height: 100px;
     border-radius: 5px;
   }
+  /*
+  - Border collapse sert à avoir un très unique
+  - Border raduis sert a arrondir les bord (comme autour des images)
+  */
   .col1{
     width: 210px;
   }
@@ -42,7 +46,7 @@ table, tr, td, th {
   }
   .colN,.colB,.col1,.col2,.col3,.col4,.col5,.col6{
     text-align: left;
-    padding-left: 10px;/*décallage depuis la gauche du COLONNE DROITE*/
+    padding-left: 10px; /* Décallage depuis la gauche du COLONNE DROITE */
   }
   .colB,.col1,.col2,.col3,.col4,.col5,.col6{
     vertical-align: top;
@@ -60,33 +64,33 @@ table, tr, td, th {
   }
   aside{
     background-color: #E7E7E7;
-    margin-top: 6px;/* décallage avec la photo*/
-    float: right; /*permet le déplacement par des padding et autres et ne sois pas bloquer en immobile*/
-    padding-bottom: 435px; /*pour que sa sois éterndu jusqu'en bas */
+    margin-top: 6px; /* décallage avec la photo */
+    float: right; /* permet le déplacement par des padding et autres et ne sois pas bloquer en immobile */
+    padding-bottom: 435px; /* pour que sa sois étendu jusqu'en bas */
     padding-right: 150px;
     padding-top: 2px;
   }
-  #ttlejardin{ /*float permet d'avoir une zone bougable et, dans ce cas, de le mettre sur la droite*/
-    float: right;
+  #ttlejardin{ 
+    float: right; /* float permet d'avoir une zone bougable et, dans ce cas, de le mettre sur la droite */
     font: arial;
     font-size: 30px;
     margin-top: 15px;
     padding-right: 200px;
   }
   #acceuil{
-    border:1px solid #E7E7E7; /*trait continu (solid), 1px d'épaisseur et le code couleur)*/
+    border:1px solid #E7E7E7; /* trait continu (solid), 1px d'épaisseur et le code couleur */
     }
-    footer { /*le fond en noir, supprimer les icones de listes genre les chiffres et tt avec list-style-type et le padding pour le décallage de 20px du premier <li> (genre la Acceuil)*/
+    footer { /* le fond en noir, supprimer les icones de listes (les chiffres et tt) avec list-style-type et le padding pour le décallage de 20px du premier <li> (genre l'Acceuil) */
       background-color: green;
       list-style-type: none;
       padding: 20px;
       text-align: center;
     }
-    li{ /* mettre en ligne tout les <li>*/
+    li{ /* mettre en ligne tout les <li> */
       display: inline;
       text-align: center;
     }
-    li a{ /* Décallé tous les <li> de 15px donnant de l'espace et mettant les liens en blanc*/
+    li a{ /* Décallé tous les <li> de 15px donnant de l'espace et mettant les liens en blanc */
       margin-right: 5px;
       color: white;
     }
@@ -103,10 +107,6 @@ table, tr, td, th {
       color: rgb(255, 0, 0);
       text-align: center;
     }
-    /* Deux valeurs   pour background-size     */
-    /* Première valeur : la largeur de l'image */
-    /* Seconde valeur : la hauteur de l'image  */
-    /*background: no-repeat 100% url("../img/ete.jpg"); <-- C'est un exemple*/
     table{
       margin: auto;
     }

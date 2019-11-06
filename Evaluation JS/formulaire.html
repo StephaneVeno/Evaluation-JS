@@ -46,22 +46,22 @@
             <p>* Ces zones sont obligatoires pour valider votre formulaire</p>
             <div>
                 <!--Label OBLIGATOIRE avant chaque Input // Les écritures sont a TOUJOURS mettre entre les <label></label> !!!-->
-                <!--Required permet de forcer le remplissage de ce champs pour pouvoir valider le formulaire-->
+                <!--Required permet de forcer le remplissage de ce champ pour pouvoir valider le formulaire-->
                 <label for="nom">Votre nom*:</label>
                 <input type="text" id="nom" name="nom" required>
                 <span id="missNom">*</span>
+                <!--span sert à entourer par exemple une partie de texte pour changer la courleur de celui-ci. Mais pas comme lable, c'est "générique" donc peut contenir rien comme un * etc.-->
             </div>
             <div>
                 <label for="prenom">Votre prénom*:</label>
                 <input type="text" id="prenom" name="prenom" required>
                 <span id="missPrenom">*</span>
-<!--Mettre le même name pour pouvoir en cocher qu'un seul sinon sa offre deux possibilités et du coup les deux son cochable-->
             </div>
             <div>
                 <p id="sexe">Sexe*: </p>
                 <input type="radio" class="sexe" name="sexe" value="femme"> Femme
                 <input type="radio" class="sexe" name="sexe" value="homme" checked> Homme
-<!--checked permet d'avoir quelques chose de pré-coché-->
+                <!--checked permet d'avoir quelques chose de pré-coché-->
             </div>
             <div>
                 <label for="ddn">Date de naissance*:</label><input type="date" id="ddn" name="ddn" required>
@@ -89,11 +89,11 @@
             </div>
     </fieldset>
     <fieldset id="field2">
-            <legend>Votre demande</legend>
-<!--datalistpermet de cibler une liste d'éléments via un champ <input> et Option c'est les choix et value les trucs que l'ont mes comme choix-->
-<div>
+        <legend>Votre demande</legend>
+    <div>
     <label for="sujets">Sujet*:</label>
-<!--select permet de faire comme datalist mais sans input et en selectionnant par défaults le choix entré en premier dans la liste-->
+<!--select permet de faire comme datalist mais sans input et en selectionnant par défaut le choix entré en premier dans la liste-->
+<!--datalist permet de cibler une liste d'éléments via un champ <input> et Option c'est les choix et value les trucs que l'ont mes comme choix-->
 <select id="sujets">
     <option value="Mes commandes">Mes commandes</option>
     <option value="Question sur le produit">Question sur le produit</option>

@@ -15,7 +15,7 @@ let pap = pu*qtecom;
 let port = 0;
 //la remise
 let rem = 0;
-//prix à payer total
+//Prix à payer total
 let tot = 0;
 //traitement du frais de port
 if (tot >= 500){
@@ -74,16 +74,15 @@ function Ex3(){
     do {
         nombre = parseInt(prompt("Veuillez entrer un nombre. Pour arreter la saisie, taper 0."));
         myTableau.push(nombre);
-        //pour faire les nombre a la queue leuleu
+        //pour faire les nombre à la queue
         i++;
         //i permet l'incrémentation des cases du tableau
     }while (nombre != 0);
     myTableau.pop();
-    //le pop sert à enlever le zéro saisie pour arréter la saisie justement héhé
+    //le pop sert à enlever le zéro entré pour arréter la saisie
     let max = myTableau.reduce(function(a,b) {
         return Math.max(a, b);
       });
-//a première colonne, b dernière colonne
 //.reduce : c'est le nom de la fonction
 // Pas oubliez de fermer la parenthèse et le point-virgule après le croché de la fonction car ça ferme le .reduce (le let max par exemple quoi)
 // a siginifie le début du tableau et b la fin
@@ -104,33 +103,33 @@ button.addEventListener('click', Ex4);
 //le onClick non intrusif
 
 function Ex4(){
-    let basdegamme = 0;
+    let jeune = 0;
     // jeunes (- de 20)
-    let moyennegamme = 0;
-    //jeunesse perdurante (20-40)
-    let oldschool = 0;
+    let moyen = 0;
+    //moyenne d'age (20-40)
+    let vieux = 0;
     //les anciens (+ de 40)
     let age = 0;
-    //age demandé ( le 0 pour initialiser)
+    //age demandé (le 0 pour initialiser la variable)
 
     while (age < 100){
         age = parseInt(prompt("Veuillez entrer l'age en finissant par la personne dépassant les 100 ans. "));
-// rentré de l'information sous forme de liste d'age dans l'ordre inch'allah
+// rentré de l'information sous forme de liste d'age dans l'ordre
         if (age < 20){
-            basdegamme += 1;
+            jeune += 1;
 //compteur +1 quand y'a une personne inférieur a 20 ans
         }else if (age >= 20 && age <= 40){
-            moyennegamme += 1;
+            moyen += 1;
 //compteur +1 quand y'a une personne entre 20 et 40 ans
         }else {
-            oldschool +=1;
+            vieux +=1;
 //compteur +1 quand y'a une personne supérieur a 40 ans
         }
     }
-    console.log("- de 20 ans: "+basdegamme);
-    console.log("Entre 20 et 40 ans: "+moyennegamme);
-    console.log("+ de 40 ans: "+oldschool);
-    console.log("Vous venez de saisir "+basdegamme+" personne(s) d'âge inférieur à 20 ans, "+moyennegamme+" personne(s) ayant entre 20 et 40 ans ainsi que "+oldschool+" personne(s) d'âge supérieur à 40 ans (Centenaire inclu !).");
+    console.log("- de 20 ans: "+jeune);
+    console.log("Entre 20 et 40 ans: "+moyen);
+    console.log("+ de 40 ans: "+vieux);
+    console.log("Vous venez de saisir "+jeune+" personne(s) d'âge inférieur à 20 ans, "+moyen+" personne(s) ayant entre 20 et 40 ans ainsi que "+vieux+" personne(s) d'âge supérieur à 40 ans (Centenaire inclu !).");
 }
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -148,7 +147,7 @@ function Ex5(){
     console.log("=============================");
 
     for (i=0; i<=10; i++){
-//i=0 car une table commence à zéro, puis i<=10 car une table va jusqu'à 10 et i++ psk tmtc c'une incrémentation
+//i=0 car une table commence à zéro, puis i<=10 car une table va jusqu'à 10 et i++ parce que c'est une incrémentation
         table = chiffre*i;
 //table = chiffre souhaitez fois le multiplicateur i
         console.log(chiffre+" x "+i+" = "+table);
@@ -171,14 +170,13 @@ function Ex6(){
 //recherche la position du prénom recherché
 
     if(position < 0 || position > 10){
-//si -1 ou 11, sa sort du tableau puisque la première case c'est 0 et ma dernière c'est 10 vu que y'a 10 prénom
+//si -1 ou 11, sa sort du tableau puisque ma première case c'est 0 et ma dernière c'est 10 (vu que y'a 10 prénoms)
         console.log("Le prénom recherché n'est pas présent dans ce tableau");
     }else{
         myTableau.splice(position, 1);
-// On supprimer 1 élément à partir de son indexOf (sa position quoi) (On demande de supprimer une seul valeur qui est la position recherchée)
+// On supprimer 1 élément à partir de son indexOf (sa position)(On demande de supprimer une seul valeur qui est la position recherchée)
         myTableau.push(" ");
 // on ajoute la ligne vide à la fin
         console.log(myTableau);
 }
 }
-//----------------------------}

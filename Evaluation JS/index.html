@@ -3,17 +3,18 @@
 <head>
 <!-- meta charset = obligatoire (le plus souvent avec utf-8 car ça évite les pb d'accents dégeulasses) --> 
   <meta charset="utf-8">
-<!-- C'est le nom de l'onglet dans le navigateur --> 
+<!-- <title> : C'est le nom de l'onglet dans le navigateur --> 
   <title>Le Jardin de Stefou</title>
-  <!-- href est le lien vers le fichier, stylesheet (reste a demander) -->
+  <!-- href est le lien vers le fichier, stylesheet (relation entre html et css) -->
   <link rel="stylesheet" media="screen and (max-width: 768px)" href="assets/css/mobile.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <!--les valeurs de l'attribut content :
-- width=device-width : fixe la largeur de la fenêtre = celle de l'appareil
-- initial-scale=1.0 : niveau de zoom initial (ici échelle = 1, soit 100%)
-- shrink-to-fit=no : règle un bug spécifique du navigateur Apple Safari mobile sous le système d'exploitation iOS 9 (iPhone/iPad).-->
+  <!--les valeurs de l'attribut content (pour le meta servant a faire le bootstrap):
+    - width=device-width : fixe la largeur de la fenêtre = celle de l'appareil
+    - initial-scale=1.0 : niveau de zoom initial (ici échelle = 1, soit 100%)
+    - shrink-to-fit=no : règle un bug spécifique du navigateur Apple Safari mobile sous le système d'exploitation iOS 9 (iPhone/iPad).
+  -->
 </head>
 <body class="container-fluid">
   <header>
@@ -60,7 +61,6 @@ un nom de site/marque, éventuellement une image (logo) : "brand"  /un formulair
         <div class="d-none d-lg-block"><aside >[Colonne droite de type droitière]</aside></div>
       <h1>Accueil</h1>
 <hr><!--<hr> sert à tracer une ligne le long de la page afin de créer une séparation-->
- <!--id="" (sert pour le passage en CSS) est la pour, peut être, le passage en couleurs ou autres modifications.-->
 <section>
   <h3><u>L'entreprise</u></h3>
 <p>Notre entreprise familiale met tout son savoir-faire à votre disposition dans le domaine du jardin et du paysagisme.

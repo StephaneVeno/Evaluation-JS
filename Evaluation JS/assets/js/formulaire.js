@@ -28,7 +28,7 @@ var missArea = document.getElementById("missArea")
 //-------------------------------------------------------------------- Tout les Regex -------------------------------------------------------------------------------------
 /*
 le ? signifie zéro au le nombre de fois qu'on le veux
-le ?: sert à dire que ce n'est pas obligatoire ... Enfin je crois
+le ?: sert à dire que ce n'est pas obligatoire
 */
 
 //regex autorisant les espace, les - et les ' dans les nom et prénom
@@ -44,7 +44,7 @@ var filtreVille = new RegExp (/^[a-zA-ZàèìòùÀÈÌÒÙáéíóúýÁÉÍÓ�
 //autorise après le @ obligatoire les .(2lettres), les .(3lettres) 
 var filtreEmail = new RegExp (/^\w+[\w\!#\$%&\'\*\.\+\-\/=\?\^\`\{|\}~]*@[a-z]+\.+[a-z]{2,3}$/);
 //pour eviter les injections
-var antiIsabelle = new RegExp (/[^@|<>{}]+/)
+var Injection = new RegExp (/[^@|<>{}]+/)
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -58,8 +58,8 @@ if (nom.validity.valueMissing)
     missNom.textContent = "Veuillez remplir ce champ";
     missNom.style.color = "red";
     } 
-    else if(!filtreCara.test(nom.value)){//test la valeur du regex sur la valeur de la variable
-    event.preventDefault();//empeche l'envoie en cas de defaut détecté
+    else if(!filtreCara.test(nom.value)){//test la valeur du regex sur la valeur de la variable//test la valeur du regex sur la valeur de la variable
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté//empeche l'envoie en cas de defaut détecté
     missNom.textContent = "Veuillez rentrer un nom valide";
     missNom.style.color = "red";
 }else{
@@ -73,8 +73,8 @@ if (prenom.validity.valueMissing)
     missPrenom.textContent = "Veuillez remplir ce champ";
     missPrenom.style.color = "red";
     } 
-    else if(!filtreCara.test(prenom.value)){
-    event.preventDefault();
+    else if(!filtreCara.test(prenom.value)){//test la valeur du regex sur la valeur de la variable
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté
     missPrenom.textContent = "Veuillez renseignez un prénom conforme.";
     missPrenom.style.color = "red";
 }else{
@@ -89,8 +89,8 @@ if (date.validity.valueMissing)
     missDate.textContent = "Veuillez remplir ce champ";
     missDate.style.color = "red";
     } 
-    else if(!filtreDate.test(date.value)){
-    event.preventDefault();
+    else if(!filtreDate.test(date.value)){//test la valeur du regex sur la valeur de la variable
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté
     missDate.textContent = "Veuillez rentrez un numéro de téléphone valide.";
     missDate.style.color = "red";
 }else{
@@ -105,8 +105,8 @@ if (cp.validity.valueMissing)
     missCp.textContent = "Veuillez remplir ce champ";
     missCp.style.color = "red";
     } 
-    else if(!filtreCp.test(cp.value)){
-    event.preventDefault();
+    else if(!filtreCp.test(cp.value)){//test la valeur du regex sur la valeur de la variable
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté
     missCp.textContent = "Veuillez rentrez un code postal valide. (Exemple: 75000)";
     missCp.style.color = "red";
 }else{
@@ -121,8 +121,8 @@ if (adresse.validity.valueMissing)
     missAd.textContent = "Veuillez remplir ce champ";
     missAd.style.color = "red";
 } 
-else if(!filtreAd.test(adresse.value)){
-    event.preventDefault();
+else if(!filtreAd.test(adresse.value)){//test la valeur du regex sur la valeur de la variable
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté
     missAd.textContent = "Veuillez rentrez une adresse valide.";
     missAd.style.color = "red";
 }else{
@@ -137,8 +137,8 @@ if (ville.validity.valueMissing)
     missVille.textContent = "Veuillez remplir ce champ";
     missVille.style.color = "red";
     } 
-    else if(!filtreVille.test(ville.value)){
-    event.preventDefault();
+    else if(!filtreVille.test(ville.value)){//test la valeur du regex sur la valeur de la variable
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté
     missVille.textContent = "Veuillez rentrez un nom de ville existant.";
     missVille.style.color = "red";
 }else{
@@ -153,8 +153,8 @@ if (email.validity.valueMissing)
     missEmail.textContent = "Veuillez remplir ce champ";
     missEmail.style.color = "red";
     } 
-    else if(!filtreEmail.test(email.value)){
-    event.preventDefault();
+    else if(!filtreEmail.test(email.value)){//test la valeur du regex sur la valeur de la variable
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté
     missEmail.textContent = "Veuillez rentrez un e-mail existant.";
     missEmail.style.color = "red";
 }else{
@@ -168,8 +168,8 @@ if (area.validity.valueMissing)
     event.preventDefault()
     missArea.textContent = "Veuillez remplir ce champ";
     missArea.style.color = "red";
-}else if(!antiIsabelle.test(area.value)){
-    event.preventDefault();
+}else if(!Injection.test(area.value)){//test la valeur du regex sur la valeur de la variable
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté
     missArea.textContent = "T'es sur? ;)";
     missArea.style.color = "red";
 }else{
@@ -179,7 +179,7 @@ if (area.validity.valueMissing)
 
 // verifie la case des conditions d'utilisation
 if(check.validity.valueMissing){
-    event.preventDefault();
+    event.preventDefault();//empeche l'envoie en cas de defaut détecté
     missCheck.textContent = "Veuillez cochez la case pour poursuivre.";
     missCheck.style.color = "red";
 }else{
