@@ -10,33 +10,33 @@ let pu = parseInt(prompt("Veuillez entrer le prix unitaire du produit."));
 //quantité commandée
 let qtecom = parseInt(prompt("Veuillez entrer la quantité du produit."));
 //total de la multiplication
-let tot = pu*qtecom;
+let pap = pu*qtecom;
 //le port
 let port = 0;
 //la remise
 let rem = 0;
 //prix à payer total
-let pap = 0;
+let tot = 0;
 //traitement du frais de port
 if (tot >= 500){
     port = 0;
 }else{
-    port = Math.max(6,tot*0.02);
+    port = Math.max(6,pap*0.02);
 //Si le nombre le plus grand (pap*0.02) est inférieur à 6, alors Math.max ecrira 6 (Math.max donne le max en commençant par la valeur la plus petite donnée)
 }
 //la remise
-if (tot >= 100 && tot <= 200){
+if (pap >= 100 && pap <= 200){
     rem = 5; //5%
-}else if (tot > 200){
+}else if (pap > 200){
     rem = 10; //10%
 }
 //prix à payer = quantité*PU - la remise + les frais de port
-pap = tot-(tot*(rem/100))+port;
-console.log("Total "+pap);
-console.log("Quantité*PU "+tot);
+tot = pap-(pap*(rem/100))+port;
+console.log("Total "+tot);
+console.log("Quantité*PU "+pap);
 console.log("Port "+port);
 console.log("Remise "+rem+"%");
-console.log("Le prix total à payer est de "+pap+"€ prenant en compte "+tot*(rem/100)+"€ de remise et aussi "+port+"€ de frais de port.");
+console.log("Le prix total à payer est de "+tot+"€ prenant en compte "+pap*(rem/100)+"€ de remise et aussi "+port+"€ de frais de port.");
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ function Ex2(){
 
 let N = parseInt(prompt("Ecrire le nombre souhaitez."))
 let somme = 0;
-for (i=0; i<=N; i++){//i=0 psk on commence à zéro, i<=N psk on veux la liste avant le N tapé et i++ pour avoir une incrémentation de 0 à N
+for (i=0; i<N; i++){//i=0 psk on commence à zéro, i<=N psk on veux la liste avant le N tapé et i++ pour avoir une incrémentation de 0 à N
     console.log(i)//pour avoir la liste dans la page avec un espace (pour m'aider à verifier)
     somme +=i;//On ajoute I jusqu'à arriver à 0
 }
