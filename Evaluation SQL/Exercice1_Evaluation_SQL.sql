@@ -6,7 +6,7 @@ CREATE TABLE Client (
 cli_num INT,
 cli_nom VARCHAR(50),
 cli_adresse VARCHAR(50),
-cli_tel VARCHAR(30)?
+cli_tel VARCHAR(30),
 PRIMARY KEY (cli_num)
 );
 CREATE TABLE Produit (
