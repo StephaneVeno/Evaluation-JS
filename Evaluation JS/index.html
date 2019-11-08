@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<!-- meta charset = obligatoire (le plus souvent avec utf-8 car ça évite les pb d'accents dégeulasses) --> 
+  <!-- meta charset = obligatoire (le plus souvent avec utf-8 car ça évite les pb d'accents dégeulasses) -->
   <meta charset="utf-8">
-<!-- <title> : C'est le nom de l'onglet dans le navigateur --> 
+  <!-- <title> : C'est le nom de l'onglet dans le navigateur -->
   <title>Le Jardin de Stefou</title>
   <!-- href est le lien vers le fichier, stylesheet (relation entre html et css) -->
   <link rel="stylesheet" media="screen and (max-width: 768px)" href="assets/css/mobile.css">
@@ -16,82 +17,95 @@
     - shrink-to-fit=no : règle un bug spécifique du navigateur Apple Safari mobile sous le système d'exploitation iOS 9 (iPhone/iPad).
   -->
 </head>
+
 <body class="container-fluid">
   <header>
     <div class="col">
-      <a href="index.html"><img id="logo" src="assets/img/jarditou_logo.jpg" alt="Logo de l'entreprise Jarditou représentant un jardinié poussant une brouette rempli" title="Logo de l'entreprise Jarditou représentant un jardinié poussant une brouette rempli"></a>
+      <a href="index.html"><img id="logo" src="assets/img/jarditou_logo.jpg"
+          alt="Logo de l'entreprise Jarditou représentant un jardinié poussant une brouette rempli"
+          title="Logo de l'entreprise Jarditou représentant un jardinié poussant une brouette rempli"></a>
       <p class="d-none d-md-block" id="ttlejardin">Tout le jardin</p>
     </div>
-      <!--<a href=""> c'est pour créer un lien hypertexte-->
-        <!--<img src=""> est pour ajouter une image en tapant la source précise-->
-<!-- bouton burger comme isa a dit -->
-<nav id="navbar" class="navbar navbar-expand-lg bg-success navbar-dark col">
-  <!-- Fonctionnement des navbar :
+    <!--<a href=""> c'est pour créer un lien hypertexte-->
+    <!--<img src=""> est pour ajouter une image en tapant la source précise-->
+    <!-- bouton burger comme isa a dit -->
+    <nav id="navbar" class="navbar navbar-expand-lg bg-success navbar-dark col">
+      <!-- Fonctionnement des navbar :
 ligne 1 : on ouvre la balise <nav> qui contient plusieurs classes obligatoires (mais variables), notamment navbar-expand-sm qui indique à partir de quelle dimension (ici sm, donc à plus de 576px) la barre de navigation sera visible entièrement au lieu d'afficher le bouton hamburger.
 ligne 3-5 : on trouve ici une balise bouton : il s'agit du code du bouton 'hamburger'. L'attribut "data-target" est obligatoire; sa valeur doit être la même que celle de l'attribut id du <div> suivant (ici "collapsibleNavbar") mais préfixé du signe #.
 ligne 7-19 : un div qui contient une liste de liens classiques, c'est bien notre menu tel que visible sur des écrans larges.
 
 Les barres de navigation peuvent supporter des :
 un nom de site/marque, éventuellement une image (logo) : "brand"  /un formulaire (zone de saisie pour un champ de recherche)  /des sous-menus, appelés "dropdowns"  /Barre de navigation-->
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html" >Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tableau.html">Tableau</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="formulaire.html">Formulaire</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="Exercices.html">Exercices d'évaluation</a>
-            </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tableau.html">Tableau</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="formulaire.html">Formulaire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Exercices.html">Exercices d'évaluation</a>
+          </li>
         </ul>
-        </div>
-        </nav>
-      <a href="index.html"><img src="assets/img/promotion.jpg" id="promo" class="img-fluid col" alt="Bord de piscine pleine d'eau bleu clair avec du beau parquet clair surplombé des mots Promotion sur lames de terrasse" title="Bord de piscine pleine d'eau bleu clair avec du beau parquet clair surplombé des mots Promotion sur lames de terrasse"></a>
-      </header>
-    </div>
-    <div class="row">
-      <div>
-        <div class="d-none d-lg-block"><aside >[Colonne droite de type droitière]</aside></div>
+      </div>
+    </nav>
+    <a href="index.html"><img src="assets/img/promotion.jpg" id="promo" class="img-fluid col"
+        alt="Bord de piscine pleine d'eau bleu clair avec du beau parquet clair surplombé des mots Promotion sur lames de terrasse"
+        title="Bord de piscine pleine d'eau bleu clair avec du beau parquet clair surplombé des mots Promotion sur lames de terrasse"></a>
+  </header>
+  </div>
+  <div class="row">
+    <div>
+      <div class="d-none d-lg-block">
+        <aside>[Colonne droite de type droitière]</aside>
+      </div>
       <h1>Accueil</h1>
-<hr><!--<hr> sert à tracer une ligne le long de la page afin de créer une séparation-->
-<section>
-  <h3><u>L'entreprise</u></h3>
-<p>Notre entreprise familiale met tout son savoir-faire à votre disposition dans le domaine du jardin et du paysagisme.
-Créée il y a 70 ans, notre entreprise vend fleurs, arbustes, matériel à main et motorisés.
-Implantés à Amiens, nous intervenons dans tout le département de la Somme : Albert, Doullens, Péronne, Abbeville, Corbie.</p>
-</section>
-<section>
-<h3><u>Qualité</u></h3>
-<p>Nous mettons à votre disposition un service personnalisé, avec 1 seul interlocuteur durant tout votre projet.</p>
-<p>Vous serez séduit par notre expertise, nos compétences et notre sérieux.</p>
-</section>
-<section>
-<h3><u>Devis gratuit</u></h3>
-<p>Vous pouvez bien sûr contacter pour de plus amples informations ou pour une demande d’intervention. Vous souhaitez un devis ? Nous vous le réalisons gratuitement.</p>
-</section >
-</div>
-<footer class="col">
-  <ul>
-    <li>
-      <a href="index.html">Mentions légales</a>
-    </li>
-    <li>
-      <a href="index.html">Horaires</a>
-    </li>
-    <li>
-      <a href="index.html">Plan du site</a>
-    </li>
-  </ul>
-</footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+      <hr>
+      <!--<hr> sert à tracer une ligne le long de la page afin de créer une séparation-->
+      <section>
+        <h3><u>L'entreprise</u></h3>
+        <p>Notre entreprise familiale met tout son savoir-faire à votre disposition dans le domaine du jardin et du
+          paysagisme.
+          Créée il y a 70 ans, notre entreprise vend fleurs, arbustes, matériel à main et motorisés.
+          Implantés à Amiens, nous intervenons dans tout le département de la Somme : Albert, Doullens, Péronne,
+          Abbeville, Corbie.</p>
+      </section>
+      <section>
+        <h3><u>Qualité</u></h3>
+        <p>Nous mettons à votre disposition un service personnalisé, avec 1 seul interlocuteur durant tout votre projet.
+        </p>
+        <p>Vous serez séduit par notre expertise, nos compétences et notre sérieux.</p>
+      </section>
+      <section>
+        <h3><u>Devis gratuit</u></h3>
+        <p>Vous pouvez bien sûr contacter pour de plus amples informations ou pour une demande d’intervention. Vous
+          souhaitez un devis ? Nous vous le réalisons gratuitement.</p>
+      </section>
+    </div>
+    <footer class="col">
+      <ul>
+        <li>
+          <a href="index.html">Mentions légales</a>
+        </li>
+        <li>
+          <a href="index.html">Horaires</a>
+        </li>
+        <li>
+          <a href="index.html">Plan du site</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
+
 </html>
