@@ -1,3 +1,13 @@
+-----  Aides pour base de donnée SQL  -----
+
+DROP permet de supprimer
+ALTER permet de modifier
+Les contraintes FOREIGN KEY identifient les relations entre les tables en vérifiant les valeurs de la même colonne dans les deux tables
+PRIMARY KEY est unique et ne peut jamais être NULL. Recommendation: Prendre une colonne d'entiers.
+Exemple: PRIMARY KEY (cli_nom,cli_prenom)
+Permet de fair en sorte que, même si le prénom ou le nom éxiste plusieurs fois dans la BDD, la combinaison de SE nom et SE prénom sois unique.s
+
+
 -----  Aides pour l'interrogation de base de donnée SQL  -----
 
 
