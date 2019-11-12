@@ -1,0 +1,66 @@
+-----  Aides pour l'interrogation de base de donnée SQL  -----
+
+
+-----  DELETE  -----
+
+-> L'ordre DELETE utilise trois clauses pour supprimer une ou plusieurs lignes d'une table.
+DELETE [FROM] <NOM DE TABLE>
+WHERE <CLAUSE>
+
+- FROM spécifie le nom de la table ou les lignes seront supprimées
+- WHERE : spécifie le(s) critère(s) de sélection (optionnel) ( on peut faire une précision avec un AND en dessous de WHERE)
+
+
+-----  UPDATE -----
+
+-> L'ordre UPDATE est utilisé pour modifier des lignes de tables existantes et est composé de trois clauses :
+UPDATE <NOM DE TABLE>
+SET <NOM COLONNE 1> = <VALEUR 1> [,… <NOM COLONNE n> = <VALEUR n>]
+WHERE <condition>
+
+- SET : Nom des colonnes et leurs valeurs ou expressions mises à jour.
+Exemple de SET à multiples indications: 
+
+UPDATE employes
+SET 
+nom = 'LOPER',
+prenom = 'Dave',
+adresse = '15 avenue Tella'
+WHERE noemp = '00999'
+
+
+- WHERE : Critère de sélection pour la mise à jour d'une ligne (optionnel)
+
+
+-----  INSERT -----
+
+L'ajout de lignes dans une table (ou une vue) répond à la syntaxe suivante :
+
+-> Le mode principal dans l'ordre INSERT pour ajouter des lignes est l'insertion directe avec la clause VALUES
+INSERT INTO NOM_DE_TABLE (NOMS DE COLONNES)
+VALUES (LISTE DE VALEURS)
+
+Exemple simple : 
+	
+INSERT INTO employes (NOEMP, NOM, PRENOM, DEPT, SALAIRE)
+VALUES (00140, 'REEVES', 'HUBERT', 'A00', 2100)
+
+Exemple à multi-choix:
+INSERT INTO employes (NOEMP, NOM, PRENOM, DEPT, SALAIRE)
+VALUES 
+(00140,'REEVES','HUBERT','A00', 2100), 
+(00150,'JACQUARD','ALBERT','B00', 1800),
+(00999,'LOPER", 'DAVE', 'C00', 900)
+
+
+-----  SELECT  -----
+
+SELECT colonnes d'une ou plusieurs tables séparées par « , »
+FROM tables séparées par « , »
+WHERE conditions logiques séparées par « AND » ou « OR »
+ORDER BY colonnes séparées par « , » 
+GROUP BY permet de grouper les réponses souhaitez pour avoir une addition de celle-ci et non une multitudes de fois la même choses
+
+
+
+
