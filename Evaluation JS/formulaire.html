@@ -41,7 +41,7 @@
     </header>
     <div class="row">
         <div class="col">
-            <form action="http://bienvu.net/script.php" method="POST">
+            <form action="secuformulaire.php" method="POST">
                 <div class="form-group">
                     <fieldset id="field1">
                         <legend>Vos coordonnées</legend>
@@ -49,70 +49,111 @@
                         <div>
                             <!--Label OBLIGATOIRE avant chaque Input // Les écritures sont a TOUJOURS mettre entre les <label></label> !!!-->
                             <!--Required permet de forcer le remplissage de ce champ pour pouvoir valider le formulaire-->
-                            <label for="nom">Votre nom*:</label>
-                            <input type="text" id="nom" name="nom" required>
+                            <label for="nom">Votre nom: </label>
+                            <input type="text" id="nom" name="nom">
                             <span id="missNom">*</span>
                             <!--span sert à entourer par exemple une partie de texte pour changer la courleur de celui-ci. Mais pas comme lable, c'est "générique" donc peut contenir rien comme un * etc.-->
+                            <?php
+                            if (isset($_GET["erreur"]) && $_GET["erreur"]==1){
+                                echo ("Veuillez remplir ce champ avec un nom valide.");
+                            }
+                            ?>
                         </div>
                         <div>
-                            <label for="prenom">Votre prénom*:</label>
-                            <input type="text" id="prenom" name="prenom" required>
+                            <label for="prenom">Votre prénom: </label>
+                            <input type="text" id="prenom" name="prenom">
                             <span id="missPrenom">*</span>
+                            <?php
+                            if (isset($_GET["erreur"]) && $_GET["erreur"]==2){
+                                echo ("Veuillez remplir ce champ avec un prénom valide.");
+                            }
+                            ?>
                         </div>
                         <div>
-                            <p id="sexe">Sexe*: </p>
+                            <p id="sexe">Sexe: </p>
                             <input type="radio" class="sexe" name="sexe" value="femme"> Femme
                             <input type="radio" class="sexe" name="sexe" value="homme" checked> Homme
                             <!--checked permet d'avoir quelques chose de pré-coché-->
                         </div>
                         <div>
-                            <label for="ddn">Date de naissance*:</label><input type="date" id="ddn" name="ddn" required>
+                            <label for="ddn">Date de naissance: </label><input type="date" id="ddn" name="ddn">
                             <span id="missDate">*</span>
+                            <?php
+                            if (isset($_GET["erreur"]) && $_GET["erreur"]==3){
+                                echo ("Veuillez entrer une date valide. (Exemple: 02/10/1997)");
+                            }
+                            ?>
                         </div>
                         <div>
-                            <label for="cpostal">Code postal:</label>
-                            <input type="text" id="cpostal" name="cpostal" required>
+                            <label for="cpostal">Code postal: </label>
+                            <input type="text" id="cpostal" name="cpostal">
                             <span id="missCp">*</span>
+                            <?php
+                            if (isset($_GET["erreur"]) && $_GET["erreur"]==4){
+                                echo ("Veuillez entrer un code postal valide. (Exemple: 13014)");
+                            }
+                            ?>
                         </div>
                         <div>
-                            <label for="adresse">Adresse:</label>
-                            <input type="text" id="adresse" name="adresse" required>
+                            <label for="adresse">Adresse: </label>
+                            <input type="text" id="adresse" name="adresse">
                             <span id="missAd">*</span>
+                            <?php
+                            if (isset($_GET["erreur"]) && $_GET["erreur"]==5){
+                                echo ("Veuillez remplir ce champ avec une adresse valide.");
+                            }
+                            ?>
                         </div>
                         <div>
-                            <label for="ville">Ville:</label>
-                            <input type="text" id="ville" name="ville" required>
+                            <label for="ville">Ville: </label>
+                            <input type="text" id="ville" name="ville">
                             <span id="missVille">*</span>
+                            <?php
+                            if (isset($_GET["erreur"]) && $_GET["erreur"]==6){
+                                echo ("Veuillez entrer le nom d'une ville existante");
+                            }
+                            ?>
                         </div>
                         <div>
-                            <label for="email">Email*:</label>
-                            <input type="email" id="email" name="email" placeholder="dave.loper@afpa.fr" required>
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email" placeholder="dave.loper@afpa.fr">
                             <span id="missEmail">*</span>
+                            <?php
+                            if (isset($_GET["erreur"]) && $_GET["erreur"]==7){
+                                echo ("Veuillez entrer une email valide");
+                            }
+                            ?>
                         </div>
                     </fieldset>
                     <fieldset id="field2">
                         <legend>Votre demande</legend>
                         <div>
-                            <label for="sujets">Sujet*:</label>
+                            <label for="sujets">Sujet: </label>
                             <!--select permet de faire comme datalist mais sans input et en selectionnant par défaut le choix entré en premier dans la liste-->
                             <!--datalist permet de cibler une liste d'éléments via un champ <input> et Option c'est les choix et value les trucs que l'ont mes comme choix-->
-                            <select id="sujets">
-                                <option value="Mes commandes">Mes commandes</option>
-                                <option value="Question sur le produit">Question sur le produit</option>
-                                <option value="Réclamation">Réclamation</option>
-                                <option value="Autres">Autres</option>
+                            <select id="sujets" name = "choix[]">
+                                <option value="8" selected disabled>-- Veuillez choisir un sujet --
+                                <option value="0">Mes commandes
+                                <option value="1">Question sur le produit
+                                <option value="2">Réclamation
+                                <option value="3">Autres
+                                </option>
                             </select>
                         </div>
-                        <label for="question">Votre question:</label>
-                        <textarea name="question" id="question" placeholder="Les balises HTML, @ et {} ne seront pas décompté par sécurité. Veuillez ne pas les utiliser" required></textarea>
+                        <label for="question">Votre question: </label>
+                        <textarea name="question" id="question"></textarea>
                         <span id="missArea"></span>
                     </fieldset>
                     <div class="decalle">
-                        <input type="checkbox" id="check" name="ok" required>
-                        <label for="check"> J'accepte le traitement informatique de ce formulaire</label>
+                        <input type="checkbox" id="check" name="checkbox" value="Coché">
+                        <label for="check">J'accepte le traitement informatique de ce formulaire.</label>
                         <span id="missCheck"></span>
+                            <?php
+                            if (isset($_GET["erreur"]) && $_GET["erreur"]==8){
+                                echo ("<--- "."Veuillez cocher ce champ afin de pouvoir finaliser cette étape.");
+                            }
+                            ?>
                     </div>
-
                     <div class="decalle">
                         <input type="submit" id="ok" name="ok" value="Envoyez">
                         <input type="reset" id="cancel" name="cancel" value="Annuler">
